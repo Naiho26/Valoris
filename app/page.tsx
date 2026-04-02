@@ -27,41 +27,43 @@ export default function Home() {
             <Link href="/ueber-uns" className="btn-ghost-w">Mehr erfahren →</Link>
           </div>
           <div className="hero-stats">
-            <div>
-              <div className="hstat-val">48h</div>
-              <div className="hstat-lbl">Ersteinschätzung</div>
-            </div>
-            <div>
-              <div className="hstat-val">4</div>
-              <div className="hstat-lbl">Leistungsbereiche</div>
-            </div>
-            <div>
-              <div className="hstat-val">100%</div>
-              <div className="hstat-lbl">Persönlich</div>
-            </div>
+            <div><div className="hstat-val">48h</div><div className="hstat-lbl">Ersteinschätzung</div></div>
+            <div><div className="hstat-val">4</div><div className="hstat-lbl">Leistungsbereiche</div></div>
+            <div><div className="hstat-val">100%</div><div className="hstat-lbl">Persönlich</div></div>
           </div>
         </div>
         <div className="hero-right">
-          <div className="himg">
-            <span className="himg-label">Referenzobjekte</span>
-            <div className="hero-badge">
-              <div className="hb-val">RMG</div>
-              <div className="hb-lbl">Fokusregion</div>
-            </div>
-          </div>
-          <div className="himg-row">
-            <div className="himg-half">
-              <span className="himg-label">Ankauf</span>
-            </div>
-            <div className="himg-half">
-              <span className="himg-label">Entwicklung</span>
-            </div>
+          {/* Real photo as background */}
+          <img
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=85&fit=crop&auto=format"
+            alt="Modernes Wohngebäude"
+            style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', opacity:0.7 }}
+          />
+          <div style={{ position:'absolute', inset:0, backgroundImage:'repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,0.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,0.03) 80px)' }} />
+          <div className="hero-badge">
+            <div className="hb-val">RMG</div>
+            <div className="hb-lbl">Fokusregion</div>
           </div>
         </div>
       </div>
 
+      {/* STATS */}
+      <div style={{ background:'var(--off2)', borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)', display:'grid', gridTemplateColumns:'repeat(4,1fr)' }}>
+        {[
+          { val:'48 h', lbl:'Ersteinschätzung' },
+          { val:'4', lbl:'Leistungsbereiche' },
+          { val:'RMG', lbl:'Fokusregion' },
+          { val:'100%', lbl:'Persönliche Betreuung' },
+        ].map((s,i) => (
+          <div key={i} style={{ padding:'36px 48px', borderRight: i<3 ? '1px solid var(--border)' : 'none', textAlign:'center' }}>
+            <div style={{ fontFamily:"'Syne',sans-serif", fontSize:'36px', fontWeight:700, color:'var(--navy)', lineHeight:1, marginBottom:'6px' }}>{s.val}</div>
+            <div style={{ fontSize:'11px', letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--muted)', fontWeight:400 }}>{s.lbl}</div>
+          </div>
+        ))}
+      </div>
+
       {/* LEISTUNGEN */}
-      <section className="section" style={{ background: 'var(--white)' }}>
+      <section className="section" style={{ background:'var(--white)' }}>
         <div className="section-head">
           <div>
             <div className="eyebrow">Unsere Leistungen</div>
@@ -72,33 +74,38 @@ export default function Home() {
         <div className="l-grid">
           {[
             {
-              num: '01', title: 'Ankauf',
-              text: 'Fundierte Prüfung von Wohnungen, Mehrfamilienhäusern und Entwicklungsobjekten — zügig und strukturiert.',
-              icon: <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>,
+              num:'01', title:'Ankauf',
+              img:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&fit=crop&auto=format',
+              text:'Fundierte Prüfung von Wohnungen, Mehrfamilienhäusern und Entwicklungsobjekten — zügig und strukturiert.',
             },
             {
-              num: '02', title: 'Vermarktung',
-              text: 'Marktgerechte Positionierung, professionelles Exposé und gezielte Käuferansprache für Ihren Verkaufserfolg.',
-              icon: <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>,
+              num:'02', title:'Vermarktung',
+              img:'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&fit=crop&auto=format',
+              text:'Marktgerechte Positionierung, professionelles Exposé und gezielte Käuferansprache für Ihren Verkaufserfolg.',
             },
             {
-              num: '03', title: 'Hausverwaltung',
-              text: 'Strukturierte Betreuung mit verlässlichen Abläufen, Werterhalt und klarer Kommunikation.',
-              icon: <><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></>,
+              num:'03', title:'Hausverwaltung',
+              img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop&auto=format',
+              text:'Strukturierte Betreuung mit verlässlichen Abläufen, Werterhalt und klarer Kommunikation.',
             },
             {
-              num: '04', title: 'Entwicklung',
-              text: 'Von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
-              icon: <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>,
+              num:'04', title:'Entwicklung',
+              img:'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&fit=crop&auto=format',
+              text:'Von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
             },
           ].map((c) => (
-            <div key={c.num} className="lcard">
-              <div className="lcard-num">{c.num}</div>
-              <div className="lcard-icon">
-                <svg viewBox="0 0 24 24">{c.icon}</svg>
+            <div key={c.num} className="lcard" style={{ padding:0, overflow:'hidden' }}>
+              <div style={{ height:'180px', overflow:'hidden', position:'relative' }}>
+                <img src={c.img} alt={c.title} style={{ width:'100%', height:'100%', objectFit:'cover', transition:'transform 0.4s ease' }}
+                  onMouseOver={(e)=>(e.currentTarget.style.transform='scale(1.04)')}
+                  onMouseOut={(e)=>(e.currentTarget.style.transform='scale(1)')}
+                />
               </div>
-              <h3 className="lcard-title">{c.title}</h3>
-              <p className="lcard-text">{c.text}</p>
+              <div style={{ padding:'28px' }}>
+                <div className="lcard-num">{c.num}</div>
+                <h3 className="lcard-title">{c.title}</h3>
+                <p className="lcard-text">{c.text}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -109,10 +116,7 @@ export default function Home() {
         <div className="ticker-inner">
           {['Ankauf','Vermarktung','Hausverwaltung','Entwicklung','Rhein-Main-Gebiet','Wohnimmobilien',
             'Ankauf','Vermarktung','Hausverwaltung','Entwicklung','Rhein-Main-Gebiet','Wohnimmobilien'].map((item, i) => (
-            <span key={i}>
-              <span className="ticker-item">{item}</span>
-              <span className="ticker-sep">·</span>
-            </span>
+            <span key={i}><span className="ticker-item">{item}</span><span className="ticker-sep">·</span></span>
           ))}
         </div>
       </div>
@@ -125,40 +129,26 @@ export default function Home() {
               <div className="wv-big-val">48 h</div>
               <div className="wv-big-lbl">Ersteinschätzung garantiert</div>
             </div>
-            <div className="wv-card">
-              <div className="wv-val">4</div>
-              <div className="wv-lbl">Leistungsbereiche</div>
+            <div className="wv-card" style={{ padding:0, overflow:'hidden' }}>
+              <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=80&fit=crop&auto=format" alt="Immobilie" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
             </div>
-            <div className="wv-card">
-              <div className="wv-val">RMG</div>
-              <div className="wv-lbl">Fokusregion</div>
+            <div className="wv-card" style={{ padding:0, overflow:'hidden' }}>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80&fit=crop&auto=format" alt="Entwicklung" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
             </div>
           </div>
           <div>
             <div className="eyebrow">Warum Valoris</div>
-            <h2 className="s-title" style={{ marginBottom: '12px' }}>Persönlich.<br />Verlässlich.<br />Erfahren.</h2>
+            <h2 className="s-title" style={{ marginBottom:'12px' }}>Persönlich.<br />Verlässlich.<br />Erfahren.</h2>
             <p className="s-body">VALORIS verbindet Marktverständnis, Entwicklungskompetenz und persönliche Betreuung — für Transaktionen, die passen.</p>
             <div className="warum-points">
               {[
-                {
-                  title: 'Schnelle Ersteinschätzung',
-                  text: 'Rückmeldung in der Regel innerhalb von 48 Stunden — direkt und ohne Umwege.',
-                  icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></>
-                },
-                {
-                  title: 'Fokus auf Wohnimmobilien',
-                  text: 'Spezialisierung auf Wohnungen, MFH und Bestandsobjekte im Rhein-Main-Gebiet.',
-                  icon: <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></>
-                },
-                {
-                  title: 'Starkes Partnernetzwerk',
-                  text: 'Architektur, Bau, Handwerk und Vermarktung aus einem verlässlichen Netzwerk.',
-                  icon: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></>
-                },
-              ].map((p, i) => (
+                { title:'Schnelle Ersteinschätzung', text:'Rückmeldung in der Regel innerhalb von 48 Stunden — direkt und ohne Umwege.', icon:<><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></> },
+                { title:'Fokus auf Wohnimmobilien', text:'Spezialisierung auf Wohnungen, MFH und Bestandsobjekte im Rhein-Main-Gebiet.', icon:<><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></> },
+                { title:'Starkes Partnernetzwerk', text:'Architektur, Bau, Handwerk und Vermarktung aus einem verlässlichen Netzwerk.', icon:<><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></> },
+              ].map((p,i) => (
                 <div key={i} className="wpoint">
                   <div className="wpoint-icon">
-                    <svg viewBox="0 0 24 24">{p.icon}</svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">{p.icon}</svg>
                   </div>
                   <div>
                     <div className="wpoint-title">{p.title}</div>
@@ -171,14 +161,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <div className="cta-band">
-        <div>
-          <div className="eyebrow" style={{ color: '#93c5fd' }}>Jetzt anfragen</div>
-          <h2 className="s-title" style={{ color: '#fff', fontSize: '36px', marginBottom: '10px' }}>Immobilie anbieten?</h2>
-          <p className="s-body" style={{ color: 'rgba(255,255,255,0.45)' }}>Schnelle, diskrete Abwicklung — direkte Ansprechpartner von der ersten Einschätzung bis zum Abschluss.</p>
+      {/* FULLWIDTH CTA IMAGE */}
+      <div style={{ height:'440px', position:'relative', overflow:'hidden' }}>
+        <img
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=85&fit=crop&auto=format"
+          alt="Premium Wohnimmobilie"
+          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 55%' }}
+        />
+        <div style={{
+          position:'absolute', inset:0,
+          background:'linear-gradient(to right, rgba(15,30,53,0.88) 0%, rgba(15,30,53,0.5) 55%, rgba(15,30,53,0.15) 100%)',
+          display:'flex', alignItems:'center', padding:'0 72px',
+        }}>
+          <div>
+            <div className="eyebrow" style={{ color:'#93c5fd' }}>Jetzt anfragen</div>
+            <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:'44px', fontWeight:700, color:'#fff', lineHeight:1.08, letterSpacing:'-0.02em', marginBottom:'20px', marginTop:'10px' }}>
+              Immobilie anbieten?
+            </h2>
+            <p style={{ color:'rgba(255,255,255,0.55)', fontSize:'15px', fontWeight:300, maxWidth:'400px', marginBottom:'32px', lineHeight:1.8 }}>
+              Schnelle, diskrete Abwicklung — direkte Ansprechpartner von der ersten Einschätzung bis zum Abschluss.
+            </p>
+            <Link href="/kontakt" className="btn-white">Kontakt aufnehmen →</Link>
+          </div>
         </div>
-        <Link href="/kontakt" className="btn-white">Kontakt aufnehmen →</Link>
       </div>
 
       <Footer />
