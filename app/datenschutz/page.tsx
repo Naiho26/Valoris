@@ -43,7 +43,7 @@ export default function Datenschutz() {
       </div>
 
       {/* CONTENT */}
-      <div style={{ padding: '72px 60px', maxWidth: '860px' }}>
+      <div style={{ padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 60px)', maxWidth: '860px' }}>
 
         <Section title="1. Verantwortlicher">
           <P>Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) und sonstiger datenschutzrechtlicher Bestimmungen ist:</P>

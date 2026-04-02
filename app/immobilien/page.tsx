@@ -49,7 +49,7 @@ export default function ImmobilienPage() {
         <p style={{ fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '32px', fontWeight: 500 }}>
           {aktiv.length} Objekte verfügbar
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', className: 'immo-grid' }}>
           {aktiv.map(immo => (
             <Link key={immo.id} href={`/immobilien/${immo.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
               <div className="immo-card" style={{

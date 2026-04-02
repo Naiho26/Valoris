@@ -33,7 +33,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
       <Nav />
 
       {/* BREADCRUMB */}
-      <div style={{ background: 'var(--off2)', borderBottom: '1px solid var(--border)', padding: '14px 60px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div style={{ background: 'var(--off2)', borderBottom: '1px solid var(--border)', padding: '14px clamp(16px, 5vw, 60px)', display: 'flex', alignItems: 'center', gap: '8px' }}>
         <Link href="/" style={{ fontSize: '13px', color: 'var(--muted)', textDecoration: 'none' }}>Start</Link>
         <span style={{ color: 'var(--border2)' }}>›</span>
         <Link href="/immobilien" style={{ fontSize: '13px', color: 'var(--muted)', textDecoration: 'none' }}>Immobilien</Link>
@@ -42,7 +42,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
       </div>
 
       {/* HERO IMAGE GALLERY */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '380px', gap: '3px', background: 'var(--navy3)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'min(100%, 1fr 1fr)', gridTemplateRows: 'clamp(220px, 40vw, 380px)', gap: '3px', background: 'var(--navy3)' }}>
         <div style={{ overflow: 'hidden', gridRow: '1', position: 'relative' }}>
           <img src={immo.bilder[0]} alt={immo.titel} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
@@ -61,7 +61,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
       </div>
 
       {/* MAIN CONTENT */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '48px', padding: '60px 60px', background: 'var(--white)', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'var(--detail-cols, 1fr 360px)', gap: '48px', padding: 'clamp(20px, 5vw, 60px)', background: 'var(--white)', alignItems: 'start' }}>
 
         {/* LEFT: Details */}
         <div>
@@ -87,7 +87,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
           </p>
 
           {/* KEY FACTS */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)', borderRadius: '10px', overflow: 'hidden', marginBottom: '48px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)', borderRadius: '10px', overflow: 'hidden', marginBottom: '48px' }}>
             {[
               { label: 'Wohnfläche', val: `${immo.flaeche} m²` },
               { label: 'Zimmer', val: immo.zimmer },
@@ -110,7 +110,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
           {/* AUSSTATTUNG */}
           <div style={{ marginBottom: '48px' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: '22px', fontWeight: 600, color: 'var(--navy)', marginBottom: '20px', letterSpacing: '-0.01em' }}>Ausstattung & Merkmale</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
               {immo.ausstattung.map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', color: 'var(--text)', fontWeight: 300 }}>
                   <div style={{ width: '20px', height: '20px', background: 'var(--blue-light)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -147,7 +147,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
         </div>
 
         {/* RIGHT: Sticky contact card */}
-        <div style={{ position: 'sticky', top: '90px' }}>
+        <div className='detail-sticky' style={{ position: 'sticky', top: '90px' }}>
           <div style={{ background: 'var(--navy)', borderRadius: '16px', padding: '32px', marginBottom: '16px' }}>
             <div style={{ fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '6px' }}>Kaufpreis</div>
             <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '32px', fontWeight: 700, color: '#fff', marginBottom: '24px', letterSpacing: '-0.01em' }}>
@@ -198,11 +198,11 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
       </div>
 
       {/* WEITERE OBJEKTE */}
-      <section style={{ padding: '72px 60px', background: 'var(--off)', borderTop: '1px solid var(--border)' }}>
+      <section style={{ padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 60px)', background: 'var(--off)', borderTop: '1px solid var(--border)' }}>
         <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: '28px', fontWeight: 700, color: 'var(--navy)', marginBottom: '32px', letterSpacing: '-0.01em' }}>
           Weitere Objekte
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           {immobilien.filter(i => i.slug !== immo.slug).slice(0, 3).map(other => (
             <Link key={other.id} href={`/immobilien/${other.slug}`} style={{ textDecoration: 'none' }}>
               <div className="immo-card" style={{ background: '#fff', borderRadius: '10px', border: '1px solid var(--border)', overflow: 'hidden', transition: 'all 0.25s' }}>
@@ -222,7 +222,15 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
 
       <Footer />
 
+
       <style>{`
+        @media (max-width: 900px) {
+          :root { --detail-cols: 1fr; }
+          .detail-sticky { position: static !important; }
+        }
+        @media (min-width: 901px) {
+          :root { --detail-cols: 1fr 360px; }
+        }
         .immo-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.09); }
         .immo-card:hover img { transform: scale(1.04); }
       `}</style>

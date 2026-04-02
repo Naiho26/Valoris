@@ -5,7 +5,7 @@ export default function Impressum() {
   return (
     <>
       <Nav />
-      <div style={{ padding: '96px 60px', maxWidth: '720px' }}>
+      <div style={{ padding: 'clamp(40px, 6vw, 96px) clamp(20px, 5vw, 60px)', maxWidth: '720px' }}>
         <div className="eyebrow">Rechtliches</div>
         <h1 className="s-title" style={{ marginBottom: '48px' }}>Impressum</h1>
         <div style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: '1.9', fontWeight: 300 }}>
