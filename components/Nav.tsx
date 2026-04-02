@@ -16,6 +16,7 @@ export default function Nav() {
       </Link>
       <div className="nav-center">
         <Link href="/" className={path === '/' ? 'active' : ''}>Startseite</Link>
+        <Link href="/immobilien" className={path.startsWith('/immobilien') ? 'active' : ''}>Immobilien</Link>
         <Link href="/ueber-uns" className={path === '/ueber-uns' ? 'active' : ''}>Über uns</Link>
         <Link href="/kontakt" className={path === '/kontakt' ? 'active' : ''}>Kontakt</Link>
       </div>
