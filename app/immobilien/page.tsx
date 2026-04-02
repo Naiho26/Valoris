@@ -9,9 +9,14 @@ const statusColor: Record<string, string> = {
   'Verkauft': '#6b7280',
 }
 
+function formatPreis(preis: string): string {
+  const num = parseInt(preis.replace(/\D/g, ''), 10)
+  if (isNaN(num)) return preis
+  return num.toLocaleString('de-DE')
+}
+
 export default function ImmobilienPage() {
   const aktiv = immobilien.filter(i => i.status !== 'Verkauft')
-  const verkauft = immobilien.filter(i => i.status === 'Verkauft')
 
   return (
     <>
@@ -24,10 +29,8 @@ export default function ImmobilienPage() {
           Aktuelle Immobilien
         </h1>
         <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '15px', fontWeight: 300, maxWidth: '480px', lineHeight: 1.8 }}>
-          Ausgewählte Wohn­immobilien im Rhein-Main-Gebiet — geprüft, dokumentiert und diskret vermarktet.
+          Ausgewählte Wohnimmobilien im Rhein-Main-Gebiet — geprüft, dokumentiert und diskret vermarktet.
         </p>
-
-        {/* Filter pills */}
         <div style={{ display: 'flex', gap: '10px', marginTop: '36px', flexWrap: 'wrap' }}>
           {['Alle', 'Mehrfamilienhaus', 'Eigentumswohnung', 'Penthouse', 'Wohnhaus'].map(f => (
             <span key={f} style={{
@@ -60,7 +63,6 @@ export default function ImmobilienPage() {
                     alt={immo.titel}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                   />
-                  {/* Status badge */}
                   <div style={{
                     position: 'absolute', top: '14px', left: '14px',
                     background: '#fff', borderRadius: '100px', padding: '4px 12px',
@@ -70,7 +72,6 @@ export default function ImmobilienPage() {
                     <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: statusColor[immo.status], display: 'inline-block' }} />
                     {immo.status}
                   </div>
-                  {/* Typ badge */}
                   <div style={{
                     position: 'absolute', top: '14px', right: '14px',
                     background: 'rgba(15,30,53,0.75)', borderRadius: '100px', padding: '4px 12px',
@@ -92,11 +93,11 @@ export default function ImmobilienPage() {
                     {immo.kurzbeschreibung}
                   </p>
 
-                  {/* Stats row */}
-                  <div style={{ display: 'flex', gap: '0', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
+                  {/* Stats */}
+                  <div style={{ display: 'flex', gap: '0', borderTop: '1px solid var(--border)', paddingTop: '16px', marginBottom: '18px' }}>
                     {[
                       { label: 'Fläche', val: `${immo.flaeche} m²` },
-                      { label: 'Zimmer', val: immo.zimmer },
+                      { label: 'Zimmer', val: String(immo.zimmer) },
                       { label: 'Baujahr', val: immo.baujahr },
                     ].map((s, i) => (
                       <div key={i} style={{ flex: 1, borderRight: i < 2 ? '1px solid var(--border)' : 'none', textAlign: 'center', padding: '0 8px' }}>
@@ -107,11 +108,11 @@ export default function ImmobilienPage() {
                   </div>
 
                   {/* Price */}
-                  <div style={{ marginTop: '18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div>
                       <div style={{ fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '2px' }}>Kaufpreis</div>
                       <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '20px', fontWeight: 700, color: 'var(--navy)' }}>
-                        € {Number(immo.preis).toLocaleString('de-DE')}
+                        € {formatPreis(immo.preis)}
                       </div>
                     </div>
                     <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '12px', fontWeight: 500, color: 'var(--accent)', letterSpacing: '0.04em' }}>

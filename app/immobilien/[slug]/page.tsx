@@ -8,6 +8,13 @@ export async function generateStaticParams() {
   return immobilien.map(i => ({ slug: i.slug }))
 }
 
+
+function formatPreis(preis: string): string {
+  const num = parseInt(preis.replace(/\D/g, ''), 10)
+  if (isNaN(num)) return preis
+  return num.toLocaleString('de-DE')
+}
+
 const statusColor: Record<string, string> = {
   'Im Verkauf': '#16a34a',
   'Reserviert': '#d97706',
@@ -144,7 +151,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
           <div style={{ background: 'var(--navy)', borderRadius: '16px', padding: '32px', marginBottom: '16px' }}>
             <div style={{ fontSize: '10px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '6px' }}>Kaufpreis</div>
             <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '32px', fontWeight: 700, color: '#fff', marginBottom: '24px', letterSpacing: '-0.01em' }}>
-              € {Number(immo.preis).toLocaleString('de-DE')}
+              € {formatPreis(immo.preis)}
             </div>
 
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '20px', marginBottom: '28px' }}>
@@ -205,7 +212,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
                 <div style={{ padding: '18px 20px' }}>
                   <div style={{ fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>{other.plz} {other.stadt}</div>
                   <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: '15px', fontWeight: 600, color: 'var(--navy)', marginBottom: '8px', lineHeight: 1.3 }}>{other.titel}</h3>
-                  <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '16px', fontWeight: 700, color: 'var(--navy)' }}>€ {Number(other.preis).toLocaleString('de-DE')}</div>
+                  <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '16px', fontWeight: 700, color: 'var(--navy)' }}>€ {formatPreis(other.preis)}</div>
                 </div>
               </div>
             </Link>
