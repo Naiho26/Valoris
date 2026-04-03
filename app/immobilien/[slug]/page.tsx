@@ -103,7 +103,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
 
           {/* BESCHREIBUNG */}
           <div style={{ marginBottom: '48px' }}>
-            <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: '22px', fontWeight: 600, color: 'var(--navy)', marginBottom: '16px', letterSpacing: '-0.01em' }}>Objektbeschreibung</h2>
+            <h2 className='reveal' style={{ fontFamily: "'Syne',sans-serif", fontSize: '22px', fontWeight: 600, color: 'var(--navy)', marginBottom: '16px', letterSpacing: '-0.01em' }}>Objektbeschreibung</h2>
             <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.85, fontWeight: 300 }}>{immo.beschreibung}</p>
           </div>
 
@@ -204,7 +204,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           {immobilien.filter(i => i.slug !== immo.slug).slice(0, 3).map(other => (
-            <Link key={other.id} href={`/immobilien/${other.slug}`} style={{ textDecoration: 'none' }}>
+            <Link key={other.id} href={`/immobilien/${other.slug}`} className='reveal' style={{ textDecoration: 'none' }}>
               <div className="immo-card" style={{ background: '#fff', borderRadius: '10px', border: '1px solid var(--border)', overflow: 'hidden', transition: 'all 0.25s' }}>
                 <div style={{ height: '160px', overflow: 'hidden' }}>
                   <img src={other.bilder[0]} alt={other.titel} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s' }} />

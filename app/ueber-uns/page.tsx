@@ -33,7 +33,7 @@ export default function UeberUns() {
           { tag:'Unsere Region', title:'Rhein-Main-Experten', text:'Als Spezialisten für das Rhein-Main-Gebiet kennen wir die lokalen Märkte, Netzwerke und Besonderheiten — und nutzen dieses Wissen für Ihren Vorteil.' },
           { tag:'Unsere Kunden', title:'Eigentümer & Investoren', text:'Wir arbeiten für Eigentümer, Investoren und Verkäufer gleichermaßen — und sprechen die Sprache, die zur jeweiligen Situation passt.' },
         ].map((b, i) => (
-          <div key={i} className="ub">
+          <div key={i} className={`ub reveal reveal-delay-${i % 2 + 1}`}>
             <div className="ub-tag">{b.tag}</div>
             <h3 className="ub-title">{b.title}</h3>
             <p className="ub-text">{b.text}</p>
@@ -62,7 +62,7 @@ export default function UeberUns() {
             { num:'03', title:'Diskretion', text:'Alle Informationen werden vertraulich behandelt — besonders bei off-market Transaktionen.' },
             { num:'04', title:'Ganzheitlichkeit', text:'Von der Beratung bis zur nachhaltigen Wertentwicklung — vollständige Begleitung.' },
           ].map((w) => (
-            <div key={w.num} className="wert">
+            <div key={w.num} className={`wert reveal reveal-delay-${parseInt(w.num)}`}>
               <div className="wert-num">{w.num}</div>
               <h3 className="wert-title">{w.title}</h3>
               <p className="wert-text">{w.text}</p>

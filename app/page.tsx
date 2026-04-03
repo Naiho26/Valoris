@@ -61,7 +61,7 @@ export default function Home() {
           { val: 'RMG', lbl: 'Fokusregion' },
           { val: '100%', lbl: 'Persönliche Betreuung' },
         ].map((s, i) => (
-          <div key={i} style={{ padding: '36px 48px', borderRight: i < 3 ? '1px solid var(--border)' : 'none', textAlign: 'center' }}>
+          <div key={i} className={`reveal reveal-delay-${i+1}`} style={{ padding: '36px 48px', borderRight: i < 3 ? '1px solid var(--border)' : 'none', textAlign: 'center' }}>
             <div style={{ fontFamily: "'Syne',sans-serif", fontSize: '36px', fontWeight: 700, color: 'var(--navy)', lineHeight: 1, marginBottom: '6px' }}>{s.val}</div>
             <div style={{ fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--muted)', fontWeight: 400 }}>{s.lbl}</div>
           </div>
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* LEISTUNGEN */}
       <section className="section" style={{ background: 'var(--white)' }}>
-        <div className="section-head">
+        <div className="section-head reveal">
           <div>
             <div className="eyebrow">Unsere Leistungen</div>
             <h2 className="s-title">Alles aus<br />einer Hand.</h2>
@@ -100,7 +100,7 @@ export default function Home() {
               text: 'Von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
             },
           ].map((c) => (
-            <div key={c.num} className="lcard img-hover" style={{ padding: 0, overflow: 'hidden' }}>
+            <div key={c.num} className={`lcard img-hover reveal reveal-delay-${parseInt(c.num)}`} style={{ padding: 0, overflow: 'hidden' }}>
               <div style={{ height: '190px', overflow: 'hidden', position: 'relative' }}>
                 <img
                   src={c.img}
@@ -132,7 +132,7 @@ export default function Home() {
       <section className="warum">
         <div className="warum-inner">
           <div className="warum-visual">
-            <div className="wv-card-dark">
+            <div className="wv-card-dark reveal">
               <div className="wv-big-val">48 h</div>
               <div className="wv-big-lbl">Ersteinschätzung garantiert</div>
             </div>
@@ -161,7 +161,7 @@ export default function Home() {
                 { title: 'Fokus auf Wohnimmobilien', text: 'Spezialisierung auf Wohnungen, MFH und Bestandsobjekte im Rhein-Main-Gebiet.', d: 'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z M9 22V12h6v10' },
                 { title: 'Starkes Partnernetzwerk', text: 'Architektur, Bau, Handwerk und Vermarktung aus einem verlässlichen Netzwerk.', d: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M23 21v-2a4 4 0 00-3-3.87 M16 3.13a4 4 0 010 7.75 M9 7a4 4 0 100 8 4 4 0 000-8z' },
               ].map((p, i) => (
-                <div key={i} className="wpoint">
+                <div key={i} className={`wpoint reveal reveal-delay-${i+1}`}>
                   <div className="wpoint-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d={p.d} />
@@ -191,7 +191,7 @@ export default function Home() {
           display: 'flex', alignItems: 'center', padding: '0 72px',
         }}>
           <div>
-            <div className="eyebrow" style={{ color: '#93c5fd' }}>Jetzt anfragen</div>
+            <div className="reveal"><div className="eyebrow" style={{ color: '#93c5fd' }}>Jetzt anfragen</div>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: '44px', fontWeight: 700, color: '#fff', lineHeight: 1.08, letterSpacing: '-0.02em', marginBottom: '20px', marginTop: '10px' }}>
               Immobilie anbieten?
             </h2>

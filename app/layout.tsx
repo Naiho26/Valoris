@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import WhatsAppButton from '@/components/WhatsAppButton'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 export const metadata: Metadata = {
   title: 'VALORIS Projektentwicklung | Wohnimmobilien im Rhein-Main-Gebiet',
@@ -16,7 +18,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>
+        <ScrollAnimations />
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   )
 }
