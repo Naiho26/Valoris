@@ -51,7 +51,7 @@ export default function ImmobilienPage() {
         </p>
         <div className='immo-grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
           {aktiv.map(immo => (
-            <Link key={immo.id} href={`/immobilien/${immo.slug}`} className='reveal' style={{ textDecoration: 'none', display: 'block' }}>
+            <Link key={immo.id} href={`/immobilien/${immo.slug}`} className='reveal' style={{ textDecoration: 'none', display: 'block', transitionDelay: `${aktiv.indexOf(immo) * 0.08}s` }}>
               <div className="immo-card" style={{
                 background: '#fff', borderRadius: '12px', border: '1px solid var(--border)',
                 overflow: 'hidden', transition: 'all 0.25s', cursor: 'pointer',
