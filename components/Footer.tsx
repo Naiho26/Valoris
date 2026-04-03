@@ -20,6 +20,7 @@ export default function Footer() {
           <div className="footer-links">
             <Link href="/">Startseite</Link>
             <Link href="/immobilien">Immobilien</Link>
+            <Link href="/off-market">Objekt anbieten</Link>
             <Link href="/ueber-uns">Über uns</Link>
             <Link href="/kontakt">Kontakt</Link>
             <Link href="/impressum">Impressum</Link>
