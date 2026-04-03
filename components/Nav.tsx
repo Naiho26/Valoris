@@ -15,8 +15,6 @@ export default function Nav() {
     { href: '/kontakt', label: 'Kontakt' },
   ]
 
-  const offMarketActive = path.startsWith('/off-market')
-
   const isActive = (href: string) =>
     href === '/' ? path === '/' : path.startsWith(href)
 
@@ -40,22 +38,7 @@ export default function Nav() {
           ))}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <Link
-            href="/off-market"
-            style={{
-              fontSize: '12px',
-              fontWeight: offMarketActive ? 500 : 400,
-              color: offMarketActive ? 'var(--navy)' : 'var(--muted)',
-              textDecoration: 'none',
-              letterSpacing: '0.01em',
-              transition: 'color 0.2s',
-            }}
-          >
-            Objekt anbieten
-          </Link>
-          <Link href="/kontakt" className="nav-btn">Anfrage stellen</Link>
-        </div>
+        <Link href="/kontakt" className="nav-btn">Anfrage stellen</Link>
 
         {/* Hamburger toggle */}
         <button
@@ -81,13 +64,6 @@ export default function Nav() {
             {l.label}
           </Link>
         ))}
-        <Link
-          href="/off-market"
-          onClick={() => setOpen(false)}
-          style={{ fontWeight: offMarketActive ? 600 : 400, color: offMarketActive ? 'var(--accent)' : 'var(--navy)' }}
-        >
-          Objekt anbieten
-        </Link>
         <Link href="/kontakt" className="mobile-menu-btn" onClick={() => setOpen(false)}>
           Anfrage stellen →
         </Link>
