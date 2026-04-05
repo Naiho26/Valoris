@@ -93,7 +93,7 @@ export default function Home() {
             {
               num: '04', title: 'Entwicklung',
               img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&fit=crop&auto=format',
-              text: 'Von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
+              text: 'Weiterentwicklung von Bestandsimmobilien – von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
               delay: '0.3s',
             },
           ].map((c) => (
