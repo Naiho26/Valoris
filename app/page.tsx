@@ -193,7 +193,7 @@ export default function Home() {
               Immobilie anbieten?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.58)', fontSize: '15px', fontWeight: 300, maxWidth: '400px', marginBottom: '32px', lineHeight: 1.8 }}>
-              Schnelle, diskrete Abwicklung — Eine persönliche Betreuung sowie ein umfassender Service – von der ersten Beratung bis zum Notartermin und darüber hinaus, sind fester Bestandteil unseres Leistungsversprechens.
+              Schnelle, diskrete Abwicklung — Eine persönliche Betreuung sowie ein umfassender Service – von der ersten Beratung bis zum Notartermin und darüber hinaus sind fester Bestandteil unseres Leistungsversprechens.
             </p>
             <Link href="/kontakt" className="btn-white">Kontakt aufnehmen →</Link>
           </div>
