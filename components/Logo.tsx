@@ -3,15 +3,25 @@ import Link from 'next/link'
 
 export function LogoMark() {
   return (
-    <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
-      <Image
-        src="/images/valoris_logo_transparent.png"
-        alt="Valoris"
-        width={160}
-        height={50}
-        priority
-        style={{ height: 'auto', width: 'auto' }}
-      />
-    </Link>
+    <Image
+      src="/images/logo.png"
+      alt="Valoris Projektentwicklung"
+      width={220}
+      height={60}
+      priority
+      style={{ width: 'auto', height: '40px' }}
+    />
+  )
+}
+
+export function LogoMarkFooter() {
+  return (
+    <Image
+      src="/images/logo.png"
+      alt="Valoris Projektentwicklung"
+      width={220}
+      height={60}
+      style={{ width: 'auto', height: '36px' }}
+    />
   )
 }
