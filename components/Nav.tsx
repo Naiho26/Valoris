@@ -23,10 +23,6 @@ export default function Nav() {
       <nav className="nav">
         <Link href="/" className="logo-wrap">
           <LogoMark />
-          <div className="logo-text-block">
-            <span className="logo-name">VALORIS</span>
-            <span className="logo-sub">Projektentwicklung</span>
-          </div>
         </Link>
 
         {/* Desktop nav */}
