@@ -63,11 +63,11 @@ function Lightbox({ bilder, startIndex, onClose }: { bilder: string[]; startInde
 }
 
 // Adaptive Gallery
-function Gallery({ bilder, titel, hatEchteBilder, stadt }: { bilder: string[]; titel: string; hatEchteBilder?: boolean; stadt: string }) {
+function Gallery({ bilder, titel, hatEchteBilder, stadt, bildPosition }: { bilder: string[]; titel: string; hatEchteBilder?: boolean; stadt: string; bildPosition?: string }) {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null)
   const count = bilder.length
   const cellBase: React.CSSProperties = { overflow: 'hidden', position: 'relative', cursor: 'zoom-in' }
-  const imgBase: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block', transition: 'transform 0.4s ease' }
+  const imgBase: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', objectPosition: bildPosition || 'center', display: 'block', transition: 'transform 0.4s ease' }
   const symbolBadge = (city: string) => (
     <div style={{ position: 'absolute', bottom: '12px', left: '12px', background: 'rgba(15,30,53,0.75)', borderRadius: '6px', padding: '5px 12px', fontSize: '11px', color: 'rgba(255,255,255,0.7)', fontWeight: 300 }}>Symbolfoto · Lage {city}</div>
   )
@@ -159,7 +159,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
         <span style={{ fontSize: '13px', color: 'var(--navy)', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{immo.titel}</span>
       </div>
 
-      <Gallery bilder={immo.bilder} titel={immo.titel} hatEchteBilder={immo.hatEchteBilder} stadt={immo.stadt} />
+      <Gallery bilder={immo.bilder} titel={immo.titel} hatEchteBilder={immo.hatEchteBilder} stadt={immo.stadt} bildPosition={immo.bildPosition} />
 
       <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '56px', padding: 'clamp(20px,5vw,60px)', background: 'var(--white)', alignItems: 'start' }}>
         <div>

@@ -140,7 +140,7 @@ export default function ImmobilienPage() {
                         src={immo.bilder[0]}
                         alt={immo.titel}
                         style={{
-                          width: '100%', height: '100%', objectFit: 'cover', display: 'block',
+                          width: '100%', height: '100%', objectFit: 'cover', objectPosition: immo.bildPosition || 'center', display: 'block',
                           transition: 'transform 0.5s ease',
                           filter: verkauft ? 'grayscale(40%)' : 'none',
                         }}
