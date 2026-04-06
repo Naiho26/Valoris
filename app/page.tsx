@@ -83,7 +83,7 @@ export default function Home() {
             },
             {
               num: '02', title: 'Vermarktung',
-              img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&fit=crop&auto=format',
+              img: '/immobilien/images/frankfurt2.jpg',
               text: 'Marktgerechte Positionierung, professionelles Exposé und gezielte Käuferansprache für Ihren Verkaufserfolg.',
               delay: '0.1s',
             },
