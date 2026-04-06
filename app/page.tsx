@@ -77,7 +77,7 @@ export default function Home() {
           {[
             {
               num: '01', title: 'Ankauf',
-              img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&fit=crop&auto=format',
+              img: '/images/ankauf.jpeg',
               text: 'Fundierte Prüfung von Wohnungen, Mehrfamilienhäusern und Entwicklungsobjekten — zügig und strukturiert.',
               delay: '0s',
             },
