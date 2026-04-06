@@ -5,7 +5,7 @@ export function LogoMark() {
   return (
     <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
       <Image
-        src="/images/logo.png"
+        src="/images/valoris_logo_transparent.png"
         alt="Valoris"
         width={160}
         height={50}
