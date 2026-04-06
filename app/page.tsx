@@ -93,7 +93,7 @@ export default function Home() {
             {
               num: '04', title: 'Entwicklung',
               img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&fit=crop&auto=format',
-              text: 'Weiterentwicklung von Bestandsimmobilien – von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
+              text: 'Von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
               delay: '0.3s',
             },
           ].map((c) => (
@@ -154,8 +154,8 @@ export default function Home() {
             </p>
             <div className="warum-points">
               {[
-                { title: 'Schnelle Ersteinschätzung', text: 'Fundierte Markteinschätzung innerhalb von 48 Stunden — kostenfrei und unverbindlich.', delay: '0.15s', d: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 6v6l4 2' },
-                { title: 'Fokus auf Wohnimmobilien', text: 'Spezialisierung auf Wohnungen, EFH, MFH und Bestandsobjekte im Rhein-Main-Gebiet.', delay: '0.2s', d: 'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z M9 22V12h6v10' },
+                { title: 'Schnelle Ersteinschätzung', text: 'Rückmeldung in der Regel innerhalb von 48 Stunden — direkt und ohne Umwege.', delay: '0.15s', d: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 6v6l4 2' },
+                { title: 'Fokus auf Wohnimmobilien', text: 'Spezialisierung auf Wohnungen, MFH und Bestandsobjekte im Rhein-Main-Gebiet.', delay: '0.2s', d: 'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z M9 22V12h6v10' },
                 { title: 'Starkes Partnernetzwerk', text: 'Architektur, Bau, Handwerk und Vermarktung aus einem verlässlichen Netzwerk.', delay: '0.25s', d: 'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M23 21v-2a4 4 0 00-3-3.87 M16 3.13a4 4 0 010 7.75 M9 7a4 4 0 100 8 4 4 0 000-8z' },
               ].map((p, i) => (
                 <div key={i} className="wpoint reveal" style={{ transitionDelay: p.delay }}>
@@ -193,7 +193,7 @@ export default function Home() {
               Immobilie anbieten?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.58)', fontSize: '15px', fontWeight: 300, maxWidth: '400px', marginBottom: '32px', lineHeight: 1.8 }}>
-              Schnelle, diskrete Abwicklung — Eine persönliche Betreuung sowie ein umfassender Service – von der ersten Beratung bis zum Notartermin und darüber hinaus sind fester Bestandteil unseres Leistungsversprechens.
+              Schnelle, diskrete Abwicklung — direkte Ansprechpartner von der ersten Einschätzung bis zum Abschluss.
             </p>
             <Link href="/kontakt" className="btn-white">Kontakt aufnehmen →</Link>
           </div>

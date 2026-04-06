@@ -17,7 +17,7 @@ function formatPreis(preis: string): string {
   return num.toLocaleString('de-DE')
 }
 
-const FILTER_TYPEN = ['Alle', 'Mehrfamilienhaus', 'Eigentumswohnung', 'Penthouse', 'Wohnhaus']
+const FILTER_TYPEN = ['Alle', 'Mehrfamilienhaus', 'Gemischte Nutzung', 'Eigentumswohnung', 'Penthouse', 'Wohnhaus']
 
 export default function ImmobilienPage() {
   const [aktFilter, setAktFilter] = useState('Alle')
