@@ -120,7 +120,7 @@ export default function ImmobilienPage() {
                 <Link
                   key={immo.id}
                   href={`/immobilien/${immo.slug}`}
-                  className={`reveal${verkauft ? ' card-verkauft' : ''}`}
+                  className={verkauft ? ' card-verkauft' : ''}
                   style={{ textDecoration: 'none', display: 'block', transitionDelay: `${(idx % 3) * 0.08}s` }}
                 >
                   <div
