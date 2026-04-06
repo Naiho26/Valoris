@@ -83,7 +83,7 @@ export default function Home() {
             },
             {
               num: '02', title: 'Vermarktung',
-              img: '/immobilien/images/frankfurt2.jpg',
+              img: '/images/frankfurt2.jpg',
               text: 'Marktgerechte Positionierung, professionelles Exposé und gezielte Käuferansprache für Ihren Verkaufserfolg.',
               delay: '0.1s',
             },
@@ -95,7 +95,7 @@ export default function Home() {
             },
             {
               num: '04', title: 'Entwicklung',
-              img: '/immobilien/images/projektentwicklung.jpg',
+              img: '/images/projektentwicklung.jpg',
               text: 'Weiterentwicklung von Bestandsimmobilien – von der Analyse über die Sanierungsstrategie bis zur wertsteigernden Umsetzung.',
               delay: '0.3s',
             },
