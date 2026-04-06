@@ -110,9 +110,14 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'Langfristiger Gewerbemieter',
     ],
     bilder: [
-      'https://images.unsplash.com/photo-1605186620429-1ece911f171c?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      '/immobilien/frankfurt/aussen1.jpeg',
+      '/immobilien/frankfurt/aussen2.jpeg',
+      '/immobilien/frankfurt/aussen3.jpeg',
+      '/immobilien/frankfurt/aussen4.jpeg',
+      '/immobilien/frankfurt/aussen5.jpeg',
+      '/immobilien/frankfurt/haustuer.jpeg',
     ],
-    hatEchteBilder: false,
+    hatEchteBilder: true,
     bildPosition: 'center 30%',
   },
     {
