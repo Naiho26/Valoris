@@ -70,6 +70,7 @@ Besonders hervorzuheben ist die steuerliche Attraktivität des Objekts: Ein vorl
       '/immobilien/giessen/detail2.jpeg',
     ],
     hatEchteBilder: true,
+    bildPosition: 'center 30%',
   },
   {
     id: '2',
@@ -111,6 +112,7 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'https://images.unsplash.com/photo-1605186620429-1ece911f171c?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     ],
     hatEchteBilder: false,
+    bildPosition: 'center 30%',
   },
     {
     id: '3',
@@ -143,5 +145,6 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'https://upload.wikimedia.org/wikipedia/commons/e/e8/Kurhaus_Wiesbaden_blaue_Stunde_290-L4.jpg',
     ],
     hatEchteBilder: false,
+    bildPosition: 'center 30%',
   },
 ]
