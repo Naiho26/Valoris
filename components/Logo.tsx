@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function LogoMark() {
   return (
     <Image
-      src="/images/logo.png"
+      src="/images/valoris_logo_transparent.png"
       alt="Valoris Projektentwicklung"
       width={220}
       height={60}
@@ -17,7 +17,7 @@ export function LogoMark() {
 export function LogoMarkFooter() {
   return (
     <Image
-      src="/images/logo.png"
+      src="/images/valoris_logo_transparent.png"
       alt="Valoris Projektentwicklung"
       width={220}
       height={60}
