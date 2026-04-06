@@ -89,7 +89,7 @@ export default function Home() {
             },
             {
               num: '03', title: 'Hausverwaltung',
-              img: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop&auto=format',
+              img: '/images/hausverwaltung.jpeg',
               text: 'Strukturierte Betreuung mit verlässlichen Abläufen, Werterhalt und klarer Kommunikation.',
               delay: '0.2s',
             },
