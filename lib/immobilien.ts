@@ -23,7 +23,6 @@ export type Immobilie = {
   ausstattung: string[]
   bilder: string[]
   hatEchteBilder?: boolean
-  bildPosition?: string
 }
 
 export const immobilien: Immobilie[] = [

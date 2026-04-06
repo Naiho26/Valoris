@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -33,10 +34,12 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-right" style={{ position: 'relative', overflow: 'hidden' }}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=85&fit=crop&auto=format"
             alt="Modernes Wohngebäude"
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.72 }}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            style={{ objectFit: 'cover', objectPosition: 'center', opacity: 0.72 }}
           />
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,0.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,0.03) 80px)' }} />
           <div className="hero-badge">
@@ -99,7 +102,13 @@ export default function Home() {
           ].map((c) => (
             <div key={c.num} className="lcard img-hover reveal" style={{ padding: 0, overflow: 'hidden', transitionDelay: c.delay }}>
               <div style={{ height: '190px', overflow: 'hidden', position: 'relative' }}>
-                <img src={c.img} alt={c.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <Image
+                  src={c.img}
+                  alt={c.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  style={{ objectFit: 'cover', display: 'block' }}
+                />
               </div>
               <div style={{ padding: '28px 28px 32px' }}>
                 <div className="lcard-num">{c.num}</div>
@@ -129,18 +138,22 @@ export default function Home() {
               <div className="wv-big-val">48 h</div>
               <div className="wv-big-lbl">Ersteinschätzung garantiert</div>
             </div>
-            <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.1s' }}>
-              <img
+            <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.1s', position: 'relative' }}>
+              <Image
                 src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=80&fit=crop&auto=format"
                 alt="Immobilie"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                style={{ objectFit: 'cover', display: 'block' }}
               />
             </div>
-            <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.2s' }}>
-              <img
+            <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.2s', position: 'relative' }}>
+              <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80&fit=crop&auto=format"
                 alt="Entwicklung"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                style={{ objectFit: 'cover', display: 'block' }}
               />
             </div>
           </div>
@@ -177,10 +190,12 @@ export default function Home() {
 
       {/* FULLWIDTH CTA IMAGE */}
       <div style={{ height: '440px', position: 'relative', overflow: 'hidden' }}>
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=85&fit=crop&auto=format"
           alt="Premium Wohnimmobilie"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 55%', display: 'block' }}
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center 55%', display: 'block' }}
         />
         <div style={{
           position: 'absolute', inset: 0,

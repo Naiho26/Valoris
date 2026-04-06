@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useState, useEffect, useCallback } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -78,7 +79,7 @@ function Gallery({ bilder, titel, hatEchteBilder, stadt, bildPosition }: { bilde
 
       {count === 1 && (
         <div style={{ height: 'clamp(280px,42vw,480px)', overflow: 'hidden', position: 'relative', cursor: 'zoom-in' }} onClick={() => setLightboxIdx(0)}>
-          <img src={bilder[0]} alt={titel} style={{ ...imgBase }} className="gallery-img" />
+          <Image src={bilder[0]} alt={titel} fill sizes="100vw" style={{ ...imgBase }} className="gallery-img" />
           {!hatEchteBilder && symbolBadge(stadt)}
           <div style={{ position: 'absolute', bottom: '14px', right: '14px', background: 'rgba(15,30,53,0.65)', borderRadius: '6px', padding: '5px 12px', fontSize: '11px', color: 'rgba(255,255,255,0.8)', display: 'flex', alignItems: 'center', gap: '5px' }}>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -91,7 +92,7 @@ function Gallery({ bilder, titel, hatEchteBilder, stadt, bildPosition }: { bilde
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3px', height: 'clamp(280px,42vw,480px)', overflow: 'hidden', background: 'var(--navy3)' }}>
           {bilder.map((b, i) => (
             <div key={i} style={cellBase} onClick={() => setLightboxIdx(i)}>
-              <img src={b} alt={`${titel} ${i+1}`} style={imgBase} className="gallery-img" />
+              <Image src={b} alt={`${titel} ${i+1}`} fill sizes="(max-width: 900px) 100vw, 50vw" style={imgBase} className="gallery-img" />
               {i === 0 && !hatEchteBilder && symbolBadge(stadt)}
             </div>
           ))}
@@ -101,13 +102,13 @@ function Gallery({ bilder, titel, hatEchteBilder, stadt, bildPosition }: { bilde
       {count >= 3 && (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3px', height: 'clamp(280px,42vw,480px)', overflow: 'hidden', background: 'var(--navy3)' }}>
           <div style={cellBase} onClick={() => setLightboxIdx(0)}>
-            <img src={bilder[0]} alt={titel} style={imgBase} className="gallery-img" />
+            <Image src={bilder[0]} alt={titel} fill sizes="(max-width: 900px) 100vw, 50vw" style={imgBase} className="gallery-img" />
             {!hatEchteBilder && symbolBadge(stadt)}
           </div>
           <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '3px', overflow: 'hidden' }}>
             {bilder.slice(1, 3).map((b, i) => (
               <div key={i} style={cellBase} onClick={() => setLightboxIdx(i + 1)}>
-                <img src={b} alt={`${titel} ${i+2}`} style={imgBase} className="gallery-img" />
+                <Image src={b} alt={`${titel} ${i+2}`} fill sizes="(max-width: 900px) 100vw, 50vw" style={imgBase} className="gallery-img" />
                 {i === 1 && count > 3 && (
                   <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,30,53,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <span style={{ fontFamily: "'Syne',sans-serif", fontSize: '15px', fontWeight: 600, color: '#fff', letterSpacing: '0.04em' }}>+{count - 3} weitere</span>
@@ -293,7 +294,7 @@ export default function ImmobilieDetail({ params }: { params: { slug: string } }
             <Link key={other.id} href={`/immobilien/${other.slug}`} style={{ textDecoration: 'none' }}>
               <div className="immo-card" style={{ background: '#fff', borderRadius: '10px', border: '1px solid var(--border)', overflow: 'hidden', transition: 'all 0.25s' }}>
                 <div style={{ height: '160px', overflow: 'hidden', position: 'relative' }}>
-                  <img src={other.bilder[0]} alt={other.titel} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s' }} />
+                  <Image src={other.bilder[0]} alt={other.titel} fill sizes="(max-width: 900px) 100vw, 33vw" style={{ objectFit: 'cover', display: 'block', transition: 'transform 0.5s' }} />
                   {!other.hatEchteBilder && <div style={{ position: 'absolute', bottom: '8px', left: '8px', background: 'rgba(15,30,53,0.7)', borderRadius: '4px', padding: '3px 8px', fontSize: '10px', color: 'rgba(255,255,255,0.7)' }}>Symbolfoto</div>}
                 </div>
                 <div style={{ padding: '18px 20px' }}>

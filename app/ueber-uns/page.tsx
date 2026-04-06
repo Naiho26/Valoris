@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -17,10 +18,12 @@ export default function UeberUns() {
           </p>
         </div>
         <div style={{ position:'relative', overflow:'hidden' }}>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=85&fit=crop&auto=format"
             alt="Team Beratung"
-            style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', opacity:0.55 }}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            style={{ objectFit:'cover', opacity:0.55 }}
           />
         </div>
       </div>
@@ -43,10 +46,12 @@ export default function UeberUns() {
 
       {/* BILD FULLWIDTH */}
       <div style={{ height:'380px', position:'relative', overflow:'hidden' }}>
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=85&fit=crop&auto=format"
           alt="Modernes Wohnhaus"
-          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 40%' }}
+          fill
+          sizes="100vw"
+          style={{ objectFit:'cover', objectPosition:'center 40%' }}
         />
         <div style={{ position:'absolute', inset:0, background:'rgba(15,30,53,0.35)' }} />
       </div>

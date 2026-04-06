@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -136,11 +137,13 @@ export default function ImmobilienPage() {
                   >
                     {/* IMAGE */}
                     <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
-                      <img
+                      <Image
                         src={immo.bilder[0]}
                         alt={immo.titel}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
                         style={{
-                          width: '100%', height: '100%', objectFit: 'cover', objectPosition: immo.bildPosition || 'center', display: 'block',
+                          objectFit: 'cover', objectPosition: immo.bildPosition || 'center',
                           transition: 'transform 0.5s ease',
                           filter: verkauft ? 'grayscale(40%)' : 'none',
                         }}
