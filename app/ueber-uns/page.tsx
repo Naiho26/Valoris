@@ -23,7 +23,7 @@ export default function UeberUns() {
             alt="Team Beratung"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            style={{ objectFit:'cover', opacity:0.55 }}
+            style={{ objectFit:'cover', objectPosition:'center 30%', opacity:0.55 }}
           />
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function UeberUns() {
           alt="Neue Mainzer Straße"
           fill
           sizes="100vw"
-          style={{ objectFit:'cover', objectPosition:'center 80%' }}
+          style={{ objectFit:'cover', objectPosition:'center 50%' }}
         />
         <div style={{ position:'absolute', inset:0, background:'rgba(15,30,53,0.35)' }} />
       </div>
