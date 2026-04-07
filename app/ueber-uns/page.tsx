@@ -47,8 +47,8 @@ export default function UeberUns() {
       {/* BILD FULLWIDTH */}
       <div style={{ height:'380px', position:'relative', overflow:'hidden' }}>
         <Image
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=85&fit=crop&auto=format"
-          alt="Modernes Wohnhaus"
+          src="/images/mainzerstrasse.png"
+          alt="Neue Mainzer Straße"
           fill
           sizes="100vw"
           style={{ objectFit:'cover', objectPosition:'center 40%' }}
