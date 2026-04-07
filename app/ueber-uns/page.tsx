@@ -51,7 +51,7 @@ export default function UeberUns() {
           alt="Neue Mainzer Straße"
           fill
           sizes="100vw"
-          style={{ objectFit:'cover', objectPosition:'center 40%' }}
+          style={{ objectFit:'cover', objectPosition:'center 20%' }}
         />
         <div style={{ position:'absolute', inset:0, background:'rgba(15,30,53,0.35)' }} />
       </div>
