@@ -19,7 +19,7 @@ export default function UeberUns() {
         </div>
         <div style={{ position:'relative', overflow:'hidden' }}>
           <Image
-            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=85&fit=crop&auto=format"
+            src="/images/mainzerstrasse84.png"
             alt="Team Beratung"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -51,7 +51,7 @@ export default function UeberUns() {
           alt="Neue Mainzer Straße"
           fill
           sizes="100vw"
-          style={{ objectFit:'cover', objectPosition:'center 20%' }}
+          style={{ objectFit:'cover', objectPosition:'center 80%' }}
         />
         <div style={{ position:'absolute', inset:0, background:'rgba(15,30,53,0.35)' }} />
       </div>
