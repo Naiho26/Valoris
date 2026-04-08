@@ -191,7 +191,7 @@ export default function Home() {
       {/* FULLWIDTH CTA IMAGE */}
       <div style={{ height: '440px', position: 'relative', overflow: 'hidden' }}>
         <Image
-          src="https://images.unsplash.com/photo-1719579019072-96e65b294301?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwwfDB8MHx8fDI%3D"
+          src="https://images.unsplash.com/photo-1554220415-2c3f1a1df3fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwwfDB8MHx8fDI%3D"
           alt="Premium Wohnimmobilie"
           fill
           sizes="100vw"
