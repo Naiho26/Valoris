@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.1s', position: 'relative' }}>
               <Image
-                src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&q=80&fit=crop&auto=format"
+                src="https://github.com/Naiho26/Valoris/blob/main/public/images/bogdan-vaskan-1taEJJwIv-0-unsplash.jpg"
                 alt="Immobilie"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
