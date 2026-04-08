@@ -191,7 +191,7 @@ export default function Home() {
       {/* FULLWIDTH CTA IMAGE */}
       <div style={{ height: '440px', position: 'relative', overflow: 'hidden' }}>
         <Image
-          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=85&fit=crop&auto=format"
+          src="https://github.com/Naiho26/Valoris/blob/main/public/images/ilona-frey-E8woVuGIFy8-unsplash.jpg?raw=true"
           alt="Premium Wohnimmobilie"
           fill
           sizes="100vw"
