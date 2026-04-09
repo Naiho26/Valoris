@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Projektentwicklung & Immobilienankauf Frankfurt | VALORIS',
+  description: 'VALORIS Projektentwicklung ist spezialisiert auf Ankauf, Vermarktung und Entwicklung von Wohnimmobilien im Rhein-Main-Gebiet. Jetzt Immobilie anbieten.',
+}
 import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
