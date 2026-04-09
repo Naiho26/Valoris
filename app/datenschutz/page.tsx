@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Datenschutz | VALORIS Projektentwicklung',
+  description: 'Datenschutzerklärung der VALORIS Projektentwicklung UG (haftungsbeschränkt).',
+}
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
@@ -31,7 +35,6 @@ export default function Datenschutz() {
     <>
       <Nav />
 
-      {/* HERO */}
       <div style={{ background: 'var(--off2)', borderBottom: '1px solid var(--border)', padding: '64px 60px 48px' }}>
         <div className="eyebrow">Rechtliches</div>
         <h1 style={{ fontFamily: "'Syne',sans-serif", fontSize: '42px', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.1, letterSpacing: '-0.02em', marginTop: '12px', marginBottom: '16px' }}>
@@ -42,14 +45,16 @@ export default function Datenschutz() {
         </p>
       </div>
 
-      {/* CONTENT */}
       <div style={{ padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 60px)', maxWidth: '860px' }}>
 
         <Section title="1. Verantwortlicher">
           <P>Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) und sonstiger datenschutzrechtlicher Bestimmungen ist:</P>
           <p style={{ marginBottom: '12px', color: 'var(--navy)', fontWeight: 400 }}>
-            VALORIS Projektentwicklung<br />
-            Hessen, Deutschland<br />
+            Valoris Projektentwicklung UG (haftungsbeschränkt)<br />
+            Schumannstraße 27<br />
+            60325 Frankfurt am Main<br />
+            Deutschland<br />
+            Geschäftsführerin: Livia Schwarz<br />
             Telefon: +49 155 633 44 652<br />
             E-Mail: kontakt@valoris-projektentwicklung.de
           </p>
@@ -100,12 +105,7 @@ export default function Datenschutz() {
           <P>Rechtsgrundlage für technisch notwendige Cookies ist Art. 6 Abs. 1 lit. f DSGVO. Eine Einwilligungspflicht besteht für technisch notwendige Cookies nicht (§ 25 Abs. 2 TTDSG).</P>
         </Section>
 
-        <Section title="8. Externe Links und Unsplash-Bilder">
-          <P>Die auf dieser Website verwendeten Immobilienphotos werden über den Bilderdienst <strong style={{ fontWeight: 500 }}>Unsplash</strong> (Unsplash Inc., 500 rue Notre-Dame Ouest, Montréal, QC, Kanada) eingebunden. Beim Laden der Bilder baut Ihr Browser eine Verbindung zu den Servern von Unsplash auf. Dabei können technische Daten wie Ihre IP-Adresse an Unsplash übertragen werden.</P>
-          <P>Datenschutzerklärung von Unsplash: <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>unsplash.com/privacy</a></P>
-        </Section>
-
-        <Section title="9. Ihre Rechte als betroffene Person">
+        <Section title="8. Ihre Rechte als betroffene Person">
           <P>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</P>
           <Ul items={[
             'Recht auf Auskunft (Art. 15 DSGVO)',
@@ -119,7 +119,7 @@ export default function Datenschutz() {
           <P>Zur Geltendmachung Ihrer Rechte wenden Sie sich bitte an: kontakt@valoris-projektentwicklung.de</P>
         </Section>
 
-        <Section title="10. Beschwerderecht bei der Aufsichtsbehörde">
+        <Section title="9. Beschwerderecht bei der Aufsichtsbehörde">
           <P>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die zuständige Aufsichtsbehörde für den Datenschutz in Hessen ist:</P>
           <p style={{ marginBottom: '12px', color: 'var(--navy)', fontWeight: 400 }}>
             Der Hessische Beauftragte für Datenschutz und Informationsfreiheit<br />
@@ -130,12 +130,12 @@ export default function Datenschutz() {
           </p>
         </Section>
 
-        <Section title="11. Datensicherheit">
-          <P>Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</P>
+        <Section title="10. Datensicherheit">
+          <P>Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://” auf „https://” wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</P>
           <P>Wir treffen nach Maßgabe von Art. 32 DSGVO unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.</P>
         </Section>
 
-        <Section title="12. Aktualität und Änderung dieser Datenschutzerklärung">
+        <Section title="11. Aktualität und Änderung dieser Datenschutzerklärung">
           <P>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand April 2026. Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf der Website unter <strong style={{ fontWeight: 400 }}>valoris-projektentwicklung.de/datenschutz</strong> von Ihnen abgerufen und ausgedruckt werden.</P>
         </Section>
 
