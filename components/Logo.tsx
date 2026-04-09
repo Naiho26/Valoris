@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function LogoMark() {
   return (
     <Image
-      src="/images/valoris_logo_v2.png"
+      src="/images/valoris_logo_transparent.png"
       alt="Valoris Projektentwicklung"
       width={220}
       height={60}
