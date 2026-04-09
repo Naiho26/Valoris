@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Immobilien Rhein-Main | Wohnungen & Mehrfamilienhäuser | VALORIS',
+  description: 'Aktuelle Immobilienangebote und Investmentmöglichkeiten im Rhein-Main-Gebiet. Wohnungen, Mehrfamilienhäuser und Entwicklungsobjekte.',
+}
+
 'use client'
 import Image from 'next/image'
 import Nav from '@/components/Nav'
