@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         <div className="hero-right" style={{ position: 'relative', overflow: 'hidden' }}>
           <Image
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=85&fit=crop&auto=format"
+            src="/images/hero.jpeg"
             alt="Modernes Wohngebäude"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.1s', position: 'relative' }}>
               <Image
-                src="https://images.unsplash.com/photo-1621070659899-40b6b6f6731d?q=80&w=813&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/home1.jpeg"
                 alt="Immobilie"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
             <div className="wv-card reveal" style={{ padding: 0, overflow: 'hidden', minHeight: '160px', transitionDelay: '0.2s', position: 'relative' }}>
               <Image
-                src="https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFwYXJ0bWVudCUyMGludGVyaW9yfGVufDB8MHwwfHx8Mg%3D%3D"
+                src="/images/interior.jpeg"
                 alt="Entwicklung"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -191,7 +191,7 @@ export default function Home() {
       {/* FULLWIDTH CTA IMAGE */}
       <div style={{ height: '440px', position: 'relative', overflow: 'hidden' }}>
         <Image
-          src="https://images.unsplash.com/photo-1554220415-2c3f1a1df3fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwwfDB8MHx8fDI%3D"
+          src="/images/altbau_footer.jpeg"
           alt="Premium Wohnimmobilie"
           fill
           sizes="100vw"
