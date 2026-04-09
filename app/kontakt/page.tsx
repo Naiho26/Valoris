@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Kontakt | Immobilie verkaufen Rhein-Main | VALORIS',
+  description: 'Jetzt Immobilie anbieten oder Kontakt aufnehmen. Schnelle Ersteinschätzung innerhalb von 48 Stunden.',
+}
+
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ContactForm from '@/components/ContactForm'
