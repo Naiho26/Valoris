@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Über VALORIS | Projektentwicklung Rhein-Main',
+  description: 'VALORIS steht für strukturierte Projektentwicklung, Immobilienankauf und persönliche Betreuung im Rhein-Main-Gebiet.',
+}
+
 import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
