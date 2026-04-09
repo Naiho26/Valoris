@@ -1,3 +1,14 @@
+export async function generateMetadata({ params }) {
+  const immo = immobilien.find((i) => i.slug === params.slug)
+
+  if (!immo) return {}
+
+  return {
+    title: `${immo.title} | Immobilie Rhein-Main | VALORIS`,
+    description: immo.description || 'Attraktive Immobilie im Rhein-Main-Gebiet.',
+  }
+}
+
 'use client'
 import Image from 'next/image'
 import { useState, useEffect, useCallback } from 'react'
