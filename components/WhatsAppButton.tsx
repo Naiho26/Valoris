@@ -1,7 +1,7 @@
 'use client'
 
 export default function WhatsAppButton() {
-  const phone = '4915563344652' // +49 155 633 44 652 ohne + und Leerzeichen
+  const phone = '4917682463831' // +49 176 824 63 831 ohne + und Leerzeichen
   const message = encodeURIComponent('Hallo, ich interessiere mich für eine Immobilie bei VALORIS Projektentwicklung.')
   const url = `https://wa.me/${phone}?text=${message}`
 
