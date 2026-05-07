@@ -38,7 +38,7 @@ export default function Impressum() {
           <p style={{ marginBottom: '8px' }}>
             <strong style={{ color: 'var(--navy)', fontWeight: 500 }}>Kontakt</strong>
           </p>
-          <p style={{ marginBottom: '4px' }}>Telefon: +49 176 824 63 831</p>
+          <p style={{ marginBottom: '4px' }}>Telefon: +49 176 824 638 31</p>
           <p style={{ marginBottom: '24px' }}>E-Mail: kontakt@valoris-projektentwicklung.de</p>
 
           <p style={{ marginBottom: '8px' }}>
