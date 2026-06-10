@@ -158,7 +158,7 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
     slug: 'eigentumswohnung-wiesbaden-dotzheimerstrasse',
     titel: 'Kapitalanlage in Wiesbaden: 3-Zimmer-Wohnung mit 88 m² im Rheinviertel',
     typ: 'Eigentumswohnung',
-    status: 'Verfügbar',
+    status: 'Im Verkauf',
     preis: '356724',
     flaeche: '88.08',
     zimmer: 3,
