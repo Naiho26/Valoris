@@ -1,0 +1,64 @@
+import Link from 'next/link'
+import { LogoMarkFooter } from './Logo'
+
+export default function Footer() {
+  return (
+    <footer>
+      <div className="footer-top">
+        <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <LogoMarkFooter />
+          </div>
+          <p className="footer-desc">
+            Ihr Partner für Ankauf, Vermarktung, Hausverwaltung und Entwicklung von Wohnimmobilien im Rhein-Main-Gebiet.
+          </p>
+        </div>
+
+        <div>
+          <div className="footer-col-head">Navigation</div>
+          <div className="footer-links">
+            <Link href="/">Startseite</Link>
+            <Link href="/immobilien">Immobilien</Link>
+            <Link href="/ueber-uns">Über uns</Link>
+            <Link href="/kontakt">Kontakt</Link>
+            <Link href="/impressum">Impressum</Link>
+            <Link href="/datenschutz">Datenschutz</Link>
+          </div>
+        </div>
+
+        <div>
+          <div className="footer-col-head">Kontakt</div>
+          <div className="footer-contact-item">
+            <div className="fc-label">Telefon</div>
+            <div className="fc-val">
+              <a href="tel:+4915563344652">+49 155 633 44 652</a>
+            </div>
+          </div>
+          <div className="footer-contact-item">
+            <div className="fc-label">E-Mail</div>
+            <div className="fc-val">
+              <a href="mailto:kontakt@valoris-projektentwicklung.de">
+                kontakt@valoris-projektentwicklung.de
+              </a>
+            </div>
+          </div>
+          <div className="footer-contact-item">
+            <div className="fc-label">Region</div>
+            <div className="fc-val">Hessen, Rhein-Main-Gebiet</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <span className="footer-copy">
+          © {new Date().getFullYear()} VALORIS Projektentwicklung. Alle Rechte vorbehalten.
+        </span>
+        <div className="footer-legal">
+          <Link href="/impressum">Impressum</Link>
+          <Link href="/datenschutz">Datenschutz</Link>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
