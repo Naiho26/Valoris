@@ -187,7 +187,7 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'https://upload.wikimedia.org/wikipedia/commons/e/e8/Kurhaus_Wiesbaden_blaue_Stunde_290-L4.jpg',
       '/immobilien/wiesbaden-dotzheimerstrasse/flur.jpeg',
       '/immobilien/wiesbaden-dotzheimerstrasse/wohnzimmer.jpeg',
-      '/immobilien/wiesbaden-dotzheimerstrasse/küche.jpeg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/kueche.jpeg',
       '/immobilien/wiesbaden-dotzheimerstrasse/bad.jpeg',
     ],
     hatEchteBilder: false,
