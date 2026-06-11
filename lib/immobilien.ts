@@ -186,7 +186,8 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
     bilder: [
       'https://github.com/Naiho26/Valoris/blob/main/public/images/ChatGPT%20Image%20Jun%2011%2C%202026%2C%2010_51_52%20AM.png',
       'public/images/ChatGPT Image Jun 11, 2026, 10_46_07 AM.png´,
-      '
+      'public/images/ChatGPT Image Jun 11, 2026, 10_48_14 AM.png´,
+      
 
     ],
     hatEchteBilder: false,
