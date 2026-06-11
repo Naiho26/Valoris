@@ -184,14 +184,13 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'Abstellraum in der Wohnung'
     ],
     bilder: [
-      'https://upload.wikimedia.org/wikipedia/commons/e/e8/Kurhaus_Wiesbaden_blaue_Stunde_290-L4.jpg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/Aussenansicht.png',
       '/immobilien/wiesbaden-dotzheimerstrasse/flur.jpeg',
       '/immobilien/wiesbaden-dotzheimerstrasse/wohnzimmer.jpeg',
       '/immobilien/wiesbaden-dotzheimerstrasse/kueche.jpeg',
       '/immobilien/wiesbaden-dotzheimerstrasse/bad.jpeg',
-      '/immobilien/wiesbaden-dotzheimerstrasse/Aussenansicht.jpeg'
     ],
-    hatEchteBilder: false,
+    hatEchteBilder: true,
     bildPosition: 'center 30%',
   },
   {
@@ -223,9 +222,9 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'Gas-Zentral- / Gas-Etagenheizung'
     ],
     bilder: [
-      '/immobilien/wiesbaden-dotzheimerstrasse/Aussenansicht.jpeg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/Aussenansicht.png',
     ],
-    hatEchteBilder: false,
+    hatEchteBilder: true,
     bildPosition: 'center 30%',
   },
 ]
