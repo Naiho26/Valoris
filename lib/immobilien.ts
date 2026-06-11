@@ -184,7 +184,8 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'Abstellraum in der Wohnung'
     ],
     bilder: [
-      'https://upload.wikimedia.org/wikipedia/commons/e/e8/Kurhaus_Wiesbaden_blaue_Stunde_290-L4.jpg',
+      'https://github.com/Naiho26/Valoris/blob/main/public/images/ChatGPT%20Image%20Jun%2011%2C%202026%2C%2010_51_52%20AM.png',
+      '
     ],
     hatEchteBilder: false,
     bildPosition: 'center 30%',
