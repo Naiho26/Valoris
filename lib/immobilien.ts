@@ -173,7 +173,7 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
     beschreibung: `Diese Eigentumswohnung in der Dotzheimer Straße 109 in Wiesbaden bietet ca. 88,08 m² Wohnfläche, verteilt auf 3 Zimmer, eine separate Küche, ein Bad, einen Abstellraum und einen Flur. Die Wohnung befindet sich im 2. Obergeschoss eines gepflegten Mehrfamilienhauses aus ca. 1950. Zur Ausstattung gehören unter anderem Kunststoff-Isofenster, ein renoviertes Bad mit Fliesenspiegel, Laminat in den Wohnräumen sowie eine Gas-Zentral- bzw. Gas-Etagenheizung. Ein Balkon zur Dotzheimer Straße sowie ein eigener Kellerraum runden das Angebot ab. Die Lage im Wiesbadener Rheinviertel überzeugt durch kurze Wege, gewachsene Infrastruktur und eine gute Anbindung an Innenstadt, Bahnhof und das Rhein-Main-Gebiet.`,
     ausstattung: [
       '3 Zimmer',
-      'ca. 88m² Wohnfläche',
+      'ca. 88 m² Wohnfläche',
       'Separate Küche',
       'Balkon zur Dotzheimer Straße',
       'Eigenes Kellerabteil',
@@ -184,12 +184,11 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
       'Abstellraum in der Wohnung'
     ],
     bilder: [
-      'https://github.com/Naiho26/Valoris/blob/main/public/images/ChatGPT%20Image%20Jun%2011%2C%202026%2C%2010_51_52%20AM.png',
-      'public/images/ChatGPT Image Jun 11, 2026, 10_46_07 AM.png´,
-      'public/images/ChatGPT Image Jun 11, 2026, 10_48_14 AM.png´,
-      'public/images/ChatGPT Image Jun 11, 2026, 10_51_52 AM.png´
-      
-
+      'https://upload.wikimedia.org/wikipedia/commons/e/e8/Kurhaus_Wiesbaden_blaue_Stunde_290-L4.jpg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/flur.jpeg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/wohnzimmer.jpeg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/küche.jpeg',
+      '/immobilien/wiesbaden-dotzheimerstrasse/bad.jpeg',
     ],
     hatEchteBilder: false,
     bildPosition: 'center 30%',
@@ -201,7 +200,7 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
     typ: 'Eigentumswohnung',
     status: 'Im Verkauf',
     preis: '375000',
-    flaeche: '99.23',
+    flaeche: '99',
     zimmer: 2,
     etage: '4. OG + Spitzboden',
     baujahr: '1950',
@@ -211,13 +210,12 @@ Die Wohneinheiten profitieren von großzügigen Fensterfronten und lichtdurchflu
     lat: 50.0779,
     lng: 8.2285,
     kurzbeschreibung: 'Vermietete Maisonettewohnung in Wiesbaden mit ca. 99 m² Gesamtfläche über zwei Ebenen. Die Wohnung befindet sich im 4. Obergeschoss mit ausgebautem Spitzboden und eignet sich ideal als Kapitalanlage.',
-    beschreibung: `Diese vermietete Maisonettewohnung in der Dotzheimer Straße in Wiesbaden befindet sich in der obersten Ebene eines gepflegten Mehrfamilienhauses aus dem Jahr 1956. Die Wohnung verfügt über ca. 99,23 m² Gesamtfläche, verteilt auf eine Hauptebene im 4. Obergeschoss sowie einen großzügigen Spitzboden mit ca. 52,32 m². Die Hauptebene umfasst Wohnbereich, Gastzimmer, Küche, Bad, Flur und Abstellraum. Der darüberliegende Spitzboden erweitert die Wohnung um einen offenen Wohn- und Galeriebereich mit besonderem Maisonette-Charakter. Die Wohnung ist vermietet und bietet mit Bestandsmieter eine solide Kapitalanlage in gefragter Wiesbadener Lage. Die Dotzheimer Straße überzeugt durch kurze Wege in die Innenstadt, gute Verkehrsanbindung und eine gewachsene Infrastruktur im Rheinviertel.`,
+    beschreibung: `Diese vermietete Maisonettewohnung in der Dotzheimer Straße in Wiesbaden befindet sich in der obersten Ebene eines gepflegten Mehrfamilienhauses aus dem Jahr 1956. Die Wohnung verfügt über ca. 99 m² Gesamtfläche, verteilt auf eine Hauptebene im 4. Obergeschoss sowie einen großzügigen Spitzboden mit ca. 52 m². Die Hauptebene umfasst Wohnbereich, Gastzimmer, Küche, Bad, Flur und Abstellraum. Der darüberliegende Spitzboden erweitert die Wohnung um einen offenen Wohn- und Galeriebereich mit besonderem Maisonette-Charakter. Die Wohnung ist vermietet und bietet mit Bestandsmieter eine solide Kapitalanlage in gefragter Wiesbadener Lage. Die Dotzheimer Straße überzeugt durch kurze Wege in die Innenstadt, gute Verkehrsanbindung und eine gewachsene Infrastruktur im Rheinviertel.`,
     ausstattung: [
       'Vermietete Kapitalanlage',
       'Maisonette über zwei Ebenen',
       'Ca. 99 m² Gesamtfläche',
       'Ca. 52 m² Spitzboden',
-      '4. OG + Spitzboden',
       '2 Zimmer, Küche und Bad',
       'Offener Wohn- und Galeriebereich',
       'Abstellraum',
